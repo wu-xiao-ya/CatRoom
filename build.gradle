@@ -681,6 +681,7 @@ project(':cleanroom') {
 
     task genRuntimeBinPatches(type: GenerateBinPatches, dependsOn: [genClientBinPatches, genServerBinPatches]) {
         tool = props.binary_patcher
+        side = 'BOTH'
     }
 
     afterEvaluate { p ->
